@@ -1,0 +1,232 @@
+{
+  "info": {
+    "_postman_id": "39447b3d-4dfa-4456-b5d2-1f624d603a51",
+    "name": "Finance Backend APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53728803",
+    "_collection_link": "https://go.postman.co/collection/53728803-39447b3d-4dfa-4456-b5d2-1f624d603a51?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "add transactions",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "role",
+            "value": "admin",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"amount\": 1000,\r\n  \"type\": \"expense\",\r\n  \"category\": \"food\",\r\n  \"date\": \"2026-04-03\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/transactions/add",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "transactions",
+            "add"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get all transactions",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/transactions",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "transactions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "filtering transactions(category)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/transactions?category=food",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "transactions"
+          ],
+          "query": [
+            {
+              "key": "category",
+              "value": "food"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "filtering transactions(type)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/transactions?type=expense",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "transactions"
+          ],
+          "query": [
+            {
+              "key": "type",
+              "value": "expense"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "filtering transactions(category&type)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/transactions?category=food&type=expense",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "transactions"
+          ],
+          "query": [
+            {
+              "key": "category",
+              "value": "food"
+            },
+            {
+              "key": "type",
+              "value": "expense"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "transaction summary",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/transactions/summary",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "transactions",
+            "summary"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "transaction insights",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/transactions/insights",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "transactions",
+            "insights"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "add users",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Srichandana\",\r\n  \"email\": \"dasarisrichandana2006@gmail.com\",\r\n  \"role\": \"admin\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/users/add",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users",
+            "add"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get all users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
